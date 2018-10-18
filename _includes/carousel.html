@@ -1,2 +1,69 @@
-<div class="" style="height: 50px; background: #000">
+<link rel="stylesheet" itemprop="url" href="{{ site.baseurl }}/&css/carousel.css">
+
+<div class="container-fluid" style="background: #000">
+  <div class="carousel slide" id="featured" data-ride="carosel">
+    <ol class="carousel-indicators">
+      {% assign slide = 0 %}
+      {% assign first = 0 %}
+      {% for item in site.data.featured %}
+        <li data-target="#featured" data-slide-to="{{ slide }}"{% if first == 0 %} class="active"{% endif %}></li>
+        {% assign slide = slide | plus: 1 %}
+        {% assign first = -1 %}
+      {% endfor %}
+    </ol>
+    <div class="carousel-inner">
+      {% assign clr = 0 %}
+      {% assign first = 0 %}
+      {% for item in site.data.featured %}
+        {% if clr == 0 %}
+          {% assign color = "r" %}
+        {% elsif clr == 1 %}
+          {% assign color = "g" %}
+        {% else %}
+          {% assign color = "b" %}
+        {% endif %}
+        <div class="carousel-item my-2 {% if first == 0 %}active{% endif %}">
+          <div class="mx-auto py-2 container rgb-carousel-item {{ color }}">
+            <div class="row pl-3">
+              <div class="col-md-4 d-none d-lg-block my-auto">
+                <div class="row rgb-carousel-img t {{ color }}">
+                  <img src="{{ site.baseurl }}/&images/featured/desktop-clock-01.png">
+                </div>
+                <div class="row">
+                  <div class="col p-0 rgb-carousel-img bl {{ color }}">
+                    <img src="{{ site.baseurl }}/&images/featured/desktop-clock-01.png">
+                  </div>
+                  <div class="col p-0  rgb-carousel-img bm {{ color }}">
+                    <img src="{{ site.baseurl }}/&images/featured/desktop-clock-02.png">
+                  </div>
+                  <div class="col p-0  rgb-carousel-img br {{ color }}">
+                    <img src="{{ site.baseurl }}/&images/featured/desktop-clock-03.jpg">
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="text-center">
+                  <img src="" style="width: 100px; height: 100px">
+                </div>
+                <h3 class="rgb-dark">{{ item.name }}</h3>
+                <p style=" overflow: hidden; color: #333">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque consequat tincidunt efficitur. Nullam nec quam consectetur, porta turpis vitae, venenatis turpis. Donec nec purus sit amet ipsum imperdiet ullamcorper. Nam euismod blandit bibendum. Mauris efficitur, lorem sed semper pulvinar, ipsum nibh facilisis orci, nec accumsan ligula massa vehicula sapien.
+                  <a href="#" style="float: right" class="pr-3">View</a>
+                </p>
+
+              
+              </div>
+            </div>
+          </div>
+        </div>
+        {% assign clr = clr | plus: 1 | modulo: 3 %}
+        {% assign first = -1 %}
+      {% endfor %}
+    </div>
+    <a class="carousel-control-prev" href="#featured" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    </a>
+    <a class="carousel-control-next" href="#featured" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    </a>
+  </div>
 </div>

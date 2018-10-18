@@ -1,24 +1,40 @@
 <link rel="stylesheet" itemprop="url" href="{{ site.baseurl }}/&css/content-boxes.css">
 
-{% assign col = 0 %}
-{% assign clr = 0 %}
-
 <div class="row">
-{% for item in site.data.categories %}
-  <div class="col-md-4 my-2 px-2 mx-auto">
-    <div class="px-2 rgb-content-box {% if clr == 0 %}r{% elsif clr == 1 %}g{% else %}b{% endif %} {% if col == 0 %}x{% elsif col == 1 %}y{% else %}z{% endif %}">
-      <div class="text-center">
-        <img src="{{ site.baseurl }}{{ item.icon }}" class="" style="height: 28px; display: inline-block;margin-top: -15px">
-        <span style="color: #eee; display: inline-block;font-size: 24px; margin-top: 5px" class="">&nbsp;{{ item.name }}</span>
+  {% assign col = 0 %}
+  {% assign clr = 0 %}
+  {% for item in site.data.categories %}
+    
+    {% if clr == 0 %}
+      {% assign color = "r" %}
+    {% elsif clr == 1 %}
+      {% assign color = "g" %}
+    {% else %}
+      {% assign color = "b" %}
+    {% endif %}
+    {% if col == 0 %}
+      {% assign column = "x" %}
+    {% elsif col == 1 %}
+      {% assign column = "y" %}
+    {% else %}
+      {% assign column = "z" %}
+    {% endif %}
+    
+    <div class="col-md-4 mb-3 px-2 mx-auto">
+      <div class="px-3 rgb-content-box {{ color }} {{ column }}">
+        <div class="text-center">
+          <img src="{{ site.baseurl }}{{ item.icon }}" class="" style="height: 28px; display: inline-block;margin-top: -15px; margin-left: -30px">
+          <span style="color: #eee; display: inline-block;font-size: 24px; margin-top: 5px" class="">&nbsp;{{ item.name }}</span>
+        </div>
+        <p style="color: #eee">{{ item.desc }}</p>
       </div>
-      <p style="color: #eee">{{ item.desc }}</p>
     </div>
-  </div>
-  {% if col == 2 %}
+    
+    {% if col == 2 %}
+      {% assign clr = clr | plus: 1 | modulo: 3 %}
+    {% endif %}
     {% assign clr = clr | plus: 1 | modulo: 3 %}
-  {% endif %}
-  {% assign clr = clr | plus: 1 | modulo: 3 %}
-  {% assign col = col | plus: 1 | modulo: 3 %}
-  
-{% endfor %}
+    {% assign col = col | plus: 1 | modulo: 3 %}
+    
+  {% endfor %}
 </div>
