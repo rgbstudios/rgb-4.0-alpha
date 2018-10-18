@@ -1,0 +1,39 @@
+.rgb-content-box.r {
+  border: 4px solid #933;
+}
+.rgb-content-box.g {
+  border: 4px solid #393;
+}
+.rgb-content-box.b {
+  border: 4px solid #339;
+}
+.rgb-content-box.r:hover {
+  background: #c66;
+}
+.rgb-content-box.g:hover {
+  background: #6c6;
+}
+.rgb-content-box.b:hover {
+  background: #66c;
+}
+
+@media (max-width: 767.5px) {
+  .rgb-content-box.x {
+    border: 4px solid #c66;
+  }
+  .rgb-content-box.y {
+    border: 4px solid #6c6;
+  }
+  .rgb-content-box.z {
+    border: 4px solid #66c;
+  }
+  .rgb-content-box.x:hover {
+    background: #c66;
+  }
+  .rgb-content-box.y:hover {
+    background: #6c6;
+  }
+  .rgb-content-box.z:hover {
+    background: #66c;
+  }
+}
