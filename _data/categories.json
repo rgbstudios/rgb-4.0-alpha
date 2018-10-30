@@ -1,37 +1,37 @@
 [
   {
+    "name": "Applications",
+    "icon": "fas fa-folder-open",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque consequat tincidunt efficitur. Nullam nec quam consectetur",
+    "link": ""
+  },
+  {
     "name": "Utilities",
-    "icon": "/&icons/general/utilities.svg",
+    "icon": "fas fa-wrench",
     "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque consequat tincidunt efficitur. Nullam nec quam consectetur",
     "link": ""
   },
   {
     "name": "Games",
-    "icon": "/&icons/general/games.svg",
-    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque consequat tincidunt efficitur. Nullam nec quam consectetur",
-    "link": ""
-  },
-  {
-    "name": "Themes",
-    "icon": "/&icons/general/themes.svg",
+    "icon": "fas fa-gamepad",
     "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque consequat tincidunt efficitur. Nullam nec quam consectetur",
     "link": ""
   },
   {
     "name": "DnD",
-    "icon": "/&icons/general/dnd.svg",
+    "icon": "fas fa-dice-five",
     "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque consequat tincidunt efficitur. Nullam nec quam consectetur",
     "link": ""
   },
   {
-    "name": "AMVs",
-    "icon": "/&icons/general/amvs.svg",
+    "name": "Themes",
+    "icon": "fas fa-palette",
     "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque consequat tincidunt efficitur. Nullam nec quam consectetur",
     "link": ""
   },
   {
     "name": "References",
-    "icon": "/&icons/general/references.svg",
+    "icon": "fas fa-graduation-cap",
     "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque consequat tincidunt efficitur. Nullam nec quam consectetur",
     "link": ""
   }

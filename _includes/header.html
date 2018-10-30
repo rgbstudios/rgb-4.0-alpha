@@ -1,2 +1,17 @@
+<div class="container-fluid">
+  <form id="prospects_form">
+    <input class="form-control" type="text" name="query" id="query">
+    <button  id="search" type="submit">Search</button>
+  </form>
+</div>
+
+<script>
+$("#prospects_form").submit(function(e) {
+  e.preventDefault();
+  window.location.href = "{{ site.baseurl }}/search/?query=" + $("#query").val();
+});
+</script>
+
+
 <div style="height: 50px;">
 </div>
