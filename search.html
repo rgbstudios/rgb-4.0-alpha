@@ -26,19 +26,21 @@ $(document).ready(function() {
         return $(elem).text().toUpperCase().indexOf(arg.toUpperCase()) >= 0;
     };
   });
-  $(".rgb-container").addClass("d-none");
-  $(".rgb-container").find("span:contains('" + q + "')").closest(".rgb-container").removeClass("d-none");
-  $(".rgb-container:not(.d-none)").find(".rgb-content-box").removeClass("r g b x y z").addClass(function() {
-    let rtn = clr == 0 ? "r" : clr == 1 ? "g" : "b";
-    rtn += " ";
-    rtn += col == 0 ? "x" : col == 1 ? "y" : "z";
-    clr = (clr + 1) % 3;
-    if (col == 2) {
+  if(q != null) {
+    $(".rgb-container").addClass("d-none");
+    $(".rgb-container").find("span:contains('" + q + "')").closest(".rgb-container").removeClass("d-none");
+    $(".rgb-container:not(.d-none)").find(".rgb-content-box").removeClass("r g b x y z").addClass(function() {
+      let rtn = clr == 0 ? "r" : clr == 1 ? "g" : "b";
+      rtn += " ";
+      rtn += col == 0 ? "x" : col == 1 ? "y" : "z";
       clr = (clr + 1) % 3;
-    }
-    col = (col + 1) % 3;
-    return rtn;
-  });
+      if (col == 2) {
+        clr = (clr + 1) % 3;
+      }
+      col = (col + 1) % 3;
+      return rtn;
+    });
+  }
   $("#search-results").removeClass("d-none");
 });
 </script>
