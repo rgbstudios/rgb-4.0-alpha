@@ -17,6 +17,7 @@
 
 .rgb-carousel-img img {
   width: 100%;
+  height: 100%;
 }
 .rgb-carousel-img.t {
   border-radius: 2px 2px 0 0
