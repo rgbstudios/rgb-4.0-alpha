@@ -1,8 +1,45 @@
-<div class="container-fluid">
-  <form id="prospects_form">
-    <input class="form-control" type="text" name="query" id="query">
-    <button  id="search" type="submit">Search</button>
-  </form>
+<div class="container-fluid p-0">
+  <nav class="navbar p-0 m-0">
+    <div class="nav-item">
+      <p class="rgb-light">RGB Studios.org</p>
+    </div>
+    <div class="nav-item">
+      <p class="rgb-light">Projects</p>
+    </div>
+    <div class="nav-item">
+      <p class="rgb-light">Dev Blog</p>
+    </div>
+    <div class="nav-item">
+      <p class="rgb-light">About Us</p>
+    </div>
+    <div class="nav-item">
+      <p class="rgb-light">More...</p>
+    </div>
+    
+    <nav class="navbar ml-auto px-0 py-2" style="border: 1px solid red">
+      <form id="prospects_form" class="nav-item form-inline  mx-2">
+        <input class="form-control d-inline-block" type="text" name="query" id="query" placeholder="Search">
+        <button class="btn" id="search" type="submit" style="border-top-left-radius: 0; border-bottom-left-radius: 0">
+          <i class="fas fa-search"></i>
+        </button>
+      </form>
+      <div class="nav-item mx-2">
+        <a href="">
+          <i class="fab fa-facebook rgb-light" style="font-size: 36px"></i>
+        </a>
+      </div>
+      <div class="nav-item mx-2">
+        <a href="">
+          <i class="fab fa-youtube rgb-light" style="font-size: 36px"></i>
+        </a>
+      </div>
+      <div class="nav-item mx-2">
+        <a href="">
+          <i class="fab fa-twitter rgb-light" style="font-size: 36px"></i>
+        </a>
+      </div>
+    </nav>
+  </nav>
 </div>
 
 <script>
@@ -11,7 +48,3 @@ $("#prospects_form").submit(function(e) {
   window.location.href = "{{ site.baseurl }}/search/?query=" + $("#query").val();
 });
 </script>
-
-
-<div style="height: 50px;">
-</div>
