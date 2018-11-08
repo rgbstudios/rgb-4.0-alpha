@@ -1,41 +1,44 @@
+<div style="height: 5px; width: 100%; background-image: url('{{ site.baseurl }}/&images/rgb/rgb-banner.svg');background-size: 100%; transform: scaley(-1)"></div>
+
 <div class="container-fluid p-0">
-  <nav class="navbar p-0 m-0">
-    <div class="nav-item">
-      <p class="rgb-light">RGB Studios.org</p>
+  <nav class="navbar px-0 py-1 m-0">
+    <div class="nav-item mx-2 py-auto ">
+      <img src="{{ site.baseurl }}/&images/rgb/rgb-logo.svg" style="height: 32px">
+      <span class="rgb-light" style="font-size: 20px">&nbsp;RGB Studios.org</span>
     </div>
-    <div class="nav-item">
-      <p class="rgb-light">Projects</p>
+    <div class="nav-item mx-2 py-auto">
+      <span class="rgb-light">Projects</span>
     </div>
-    <div class="nav-item">
-      <p class="rgb-light">Dev Blog</p>
+    <div class="nav-item mx-2 py-auto">
+      <span class="rgb-light">Dev Blog</span>
     </div>
-    <div class="nav-item">
-      <p class="rgb-light">About Us</p>
+    <div class="nav-item mx-2 py-auto">
+      <span class="rgb-light">About Us</span>
     </div>
-    <div class="nav-item">
-      <p class="rgb-light">More...</p>
+    <div class="nav-item mx-2 py-auto">
+      <span class="rgb-light">More...</span>
     </div>
     
-    <nav class="navbar ml-auto px-0 py-2" style="border: 1px solid red">
+    <nav class="navbar ml-auto px-0 py-2">
       <form id="prospects_form" class="nav-item form-inline  mx-2">
-        <input class="form-control d-inline-block" type="text" name="query" id="query" placeholder="Search">
-        <button class="btn" id="search" type="submit" style="border-top-left-radius: 0; border-bottom-left-radius: 0">
+        <input class="form-control d-inline-block" style="height: 28px; border-top-right-radius: 0; border-bottom-right-radius: 0" type="text" name="query" id="query" placeholder="Search">
+        <button class="btn py-0 px-2" id="search" type="submit" style="height: 28px; border-top-left-radius: 0; border-bottom-left-radius: 0">
           <i class="fas fa-search"></i>
         </button>
       </form>
       <div class="nav-item mx-2">
         <a href="">
-          <i class="fab fa-facebook rgb-light" style="font-size: 36px"></i>
+          <i class="fab fa-facebook rgb-light" style="font-size: 24px"></i>
         </a>
       </div>
       <div class="nav-item mx-2">
         <a href="">
-          <i class="fab fa-youtube rgb-light" style="font-size: 36px"></i>
+          <i class="fab fa-youtube rgb-light" style="font-size: 24px"></i>
         </a>
       </div>
       <div class="nav-item mx-2">
         <a href="">
-          <i class="fab fa-twitter rgb-light" style="font-size: 36px"></i>
+          <i class="fab fa-twitter rgb-light" style="font-size: 24px"></i>
         </a>
       </div>
     </nav>
@@ -48,3 +51,5 @@ $("#prospects_form").submit(function(e) {
   window.location.href = "{{ site.baseurl }}/search/?query=" + $("#query").val();
 });
 </script>
+
+<div style="height: 5px; width: 100%; background-image: url('{{ site.baseurl }}/&images/rgb/rgb-banner.svg');background-size: 100%"></div>
