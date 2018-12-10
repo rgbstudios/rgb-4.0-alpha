@@ -1,52 +1,59 @@
 <div style="height: 5px; width: 100%; background-image: url('{{ site.baseurl }}/&images/rgb/rgb-banner.svg');background-size: 100%; transform: scaley(-1)"></div>
 
 <div class="container-fluid p-0">
-  <nav class="navbar px-0 py-1 m-0">
-    <div class="nav-item mx-2 py-auto ">
+  
+  <nav class="navbar navbar-expand-lg">
+    <div class="nav-item mx-2 py-auto">
       <img src="{{ site.baseurl }}/&images/rgb/rgb-logo.svg" style="height: 32px">
-      <span class="rgb-light" style="font-size: 20px">&nbsp;RGB Studios.org</span>
+      <span class="rgb-light" style="font-size: 20px">&nbsp;RGB&nbsp;Studios.org</span>
     </div>
-    <div class="nav-item mx-2 py-auto">
-      <span class="rgb-light">Projects</span>
-    </div>
-    <div class="nav-item mx-2 py-auto">
-      <span class="rgb-light">Dev Blog</span>
-    </div>
-    <div class="nav-item mx-2 py-auto">
-      <span class="rgb-light">About Us</span>
-    </div>
-    <div class="nav-item mx-2 py-auto">
-      <span class="rgb-light">More...</span>
-    </div>
+    <button class="navbar-toggler m-0" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation" style="border: 1px solid #eee">
+      <i class="fas fa-bars rgb-light"></i>
+    </button>
+    <div class="collapse navbar-collapse px-0 py-1 m-0" id="navbarTogglerDemo01">
+      <div class="nav-item mx-2 py-auto">
+        <span class="rgb-light">Projects</span>
+      </div>
+      <div class="nav-item mx-2 py-auto">
+        <span class="rgb-light">Dev&nbsp;Blog</span>
+      </div>
+      <div class="nav-item mx-2 py-auto">
+        <span class="rgb-light">About&nbsp;Us</span>
+      </div>
+      <div class="nav-item mx-2 py-auto">
+        <span class="rgb-light">More...</span>
+      </div>
     
-    <nav class="navbar ml-auto px-0 py-2">
-      <form id="prospects_form" class="nav-item form-inline  mx-2">
+
+      <form id="rgb_search_form" class="nav-item form-inline mx-2 ml-auto">
         <input class="form-control d-inline-block" style="height: 28px; border-top-right-radius: 0; border-bottom-right-radius: 0" type="text" name="query" id="query" placeholder="Search">
         <button class="btn py-0 px-2" id="search" type="submit" style="height: 28px; border-top-left-radius: 0; border-bottom-left-radius: 0">
           <i class="fas fa-search"></i>
         </button>
       </form>
-      <div class="nav-item mx-2">
+      <div class="nav-item mx-2 d-none d-lg-block">
         <a href="">
           <i class="fab fa-facebook rgb-light" style="font-size: 24px"></i>
         </a>
       </div>
-      <div class="nav-item mx-2">
+      <div class="nav-item mx-2 d-none d-lg-block">
         <a href="">
           <i class="fab fa-youtube rgb-light" style="font-size: 24px"></i>
         </a>
       </div>
-      <div class="nav-item mx-2">
+      <div class="nav-item mx-2 d-none d-lg-block">
         <a href="">
           <i class="fab fa-twitter rgb-light" style="font-size: 24px"></i>
         </a>
       </div>
-    </nav>
+
+      
+    </div>
   </nav>
 </div>
 
 <script>
-$("#prospects_form").submit(function(e) {
+$("#rgb_search_form").submit(function(e) {
   e.preventDefault();
   window.location.href = "{{ site.baseurl }}/search/?query=" + $("#query").val();
 });
