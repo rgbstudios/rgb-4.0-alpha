@@ -21,6 +21,7 @@
     {% endif %}
     
     <div class="col-md-4 mb-3 px-2 mx-auto rgb-container {{ color }}">
+      <a href="">
       <div class="px-3 rgb-content-box {{ color }} {{ column }}">
         <div class="text-center">
           {% assign icon = item.icon | split: " " %}
@@ -33,6 +34,7 @@
         </div>
         <p style="color: #eee">{{ item.desc }}</p>
       </div>
+      </a>
     </div>
     
     {% if col == 2 %}

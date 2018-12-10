@@ -1,9 +1,17 @@
 body {
   background: #333;
 }
+a:hover {
+  text-decoration: none;
+}
+
 .rgb-light {
   color: #eee;
 }
+a span.rgb-light:hover {
+  color: #ccc;
+}
+
 .rgb-dark {
   color: #333;
 }
